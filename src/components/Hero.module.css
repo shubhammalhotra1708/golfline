@@ -13,7 +13,8 @@
   position: absolute;
   inset: 0;
   z-index: 0;
-  background: linear-gradient(135deg, var(--white) 55%, #EDE9E1 100%);
+  background: linear-gradient(135deg, var(--white) 55%, var(--bg-muted) 100%);
+  transition: background 0.35s ease;
 }
 
 .bg::after {
@@ -23,8 +24,9 @@
   top: 0;
   width: 45%;
   height: 100%;
-  background: var(--charcoal);
+  background: var(--bg-deep);
   clip-path: polygon(15% 0%, 100% 0%, 100% 100%, 0% 100%);
+  transition: background 0.35s ease;
 }
 
 .content {
@@ -99,7 +101,7 @@
   width: 100%;
   max-width: 460px;
   aspect-ratio: 4/5;
-  background: #2A2A2A;
+  background: var(--bg-elevated);
   position: relative;
   overflow: hidden;
 }
@@ -112,7 +114,7 @@
   align-items: center;
   justify-content: center;
   gap: 12px;
-  color: rgba(255, 255, 255, 0.3);
+  color: var(--text-on-dark-dim);
   font-size: 12px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -127,7 +129,7 @@
   bottom: 24px;
   left: -28px;
   background: var(--gold);
-  color: var(--charcoal);
+  color: var(--btn-on-accent);
   padding: 16px 24px;
   font-family: var(--serif);
   font-size: 13px;

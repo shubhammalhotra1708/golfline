@@ -11,6 +11,7 @@
   padding: 52px 48px;
   position: relative;
   overflow: hidden;
+  transition: background 0.35s ease;
 }
 
 .card::before {
@@ -18,7 +19,7 @@
   font-family: var(--serif);
   font-size: 100px;
   font-weight: 700;
-  color: rgba(28, 28, 28, 0.04);
+  color: var(--ghost-text);
   position: absolute;
   top: -10px;
   right: 20px;

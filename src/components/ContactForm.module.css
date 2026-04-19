@@ -1,6 +1,7 @@
 .section {
-  background: var(--charcoal);
+  background: var(--bg-deep);
   padding: var(--section-pad);
+  transition: background 0.35s ease;
 }
 
 .eyebrow {
@@ -23,11 +24,11 @@
 }
 
 .title {
-  color: var(--white) !important;
+  color: var(--text-on-dark) !important;
 }
 
 .sub {
-  color: rgba(248, 246, 242, 0.55) !important;
+  color: var(--text-on-dark-muted) !important;
 }
 
 .grid {
@@ -40,7 +41,7 @@
 
 .info p {
   font-size: 14px;
-  color: rgba(248, 246, 242, 0.6);
+  color: var(--text-on-dark-muted);
   line-height: 1.8;
   margin-bottom: 40px;
 }
@@ -62,15 +63,15 @@
 
 .cdVal {
   font-size: 14px;
-  color: rgba(248, 246, 242, 0.8);
+  color: var(--text-on-dark);
 }
 
 .responseBadge {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  background: rgba(184, 151, 90, 0.12);
-  border: 0.5px solid var(--gold);
+  background: var(--accent-glow);
+  border: 0.5px solid var(--accent-border);
   padding: 12px 20px;
   margin-top: 32px;
   font-size: 12px;
@@ -81,8 +82,8 @@
 
 /* ─── FORM ─── */
 .form {
-  background: rgba(255, 255, 255, 0.04);
-  border: 0.5px solid rgba(255, 255, 255, 0.1);
+  background: var(--input-bg);
+  border: 0.5px solid var(--input-border);
   padding: 48px;
 }
 
@@ -101,7 +102,7 @@
   font-size: 10px;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: rgba(248, 246, 242, 0.45);
+  color: var(--text-on-dark-label);
   margin-bottom: 8px;
 }
 
@@ -109,9 +110,9 @@
 .field select,
 .field textarea {
   width: 100%;
-  background: rgba(255, 255, 255, 0.06);
-  border: 0.5px solid rgba(255, 255, 255, 0.15);
-  color: var(--white);
+  background: var(--input-bg);
+  border: 0.5px solid var(--input-border);
+  color: var(--text-on-dark);
   padding: 14px 16px;
   min-height: 48px;
   font-family: var(--sans);
@@ -124,19 +125,19 @@
 
 .field input::placeholder,
 .field textarea::placeholder {
-  color: rgba(248, 246, 242, 0.2);
+  color: var(--text-on-dark-dim);
 }
 
 .field input:focus,
 .field select:focus,
 .field textarea:focus {
   border-color: var(--gold);
-  background: rgba(184, 151, 90, 0.06);
+  background: var(--input-focus-bg);
 }
 
 .field select option {
-  background: var(--charcoal);
-  color: var(--white);
+  background: var(--bg-deep);
+  color: var(--text-on-dark);
 }
 
 .field textarea {
@@ -147,7 +148,7 @@
 .submit {
   width: 100%;
   background: var(--gold);
-  color: var(--charcoal);
+  color: var(--btn-on-accent);
   border: none;
   padding: 16px;
   font-family: var(--sans);

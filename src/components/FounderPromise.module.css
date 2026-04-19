@@ -1,8 +1,9 @@
 .promise {
-  background: var(--charcoal);
+  background: var(--bg-deep);
   padding: var(--section-pad);
   position: relative;
   overflow: hidden;
+  transition: background 0.35s ease;
 }
 
 .promise::before {
@@ -10,7 +11,7 @@
   font-family: var(--serif);
   font-size: 320px;
   font-weight: 700;
-  color: rgba(255, 255, 255, 0.03);
+  color: var(--accent-ghost);
   position: absolute;
   top: -60px;
   left: 40px;
@@ -49,7 +50,7 @@
   font-size: clamp(20px, 2.5vw, 28px);
   font-weight: 400;
   line-height: 1.7;
-  color: rgba(248, 246, 242, 0.9);
+  color: var(--text-on-dark);
   margin-bottom: 40px;
   font-style: italic;
 }

@@ -1,7 +1,7 @@
 /* ─── RESET ─── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-/* ─── DESIGN TOKENS ─── */
+/* ─── LIGHT MODE TOKENS (DEFAULT) ─── */
 :root {
   --charcoal: #1C1C1C;
   --slate: #4A4E57;
@@ -13,9 +13,71 @@
   --navy: #1B2A4A;
   --border: rgba(74,78,87,0.15);
   --border-strong: rgba(74,78,87,0.3);
+
+  /* Semantic tokens */
+  --bg-deep: #1C1C1C;
+  --bg-elevated: #2A2A2A;
+  --bg-muted: #EDE9E1;
+  --nav-bg: rgba(248, 246, 242, 0.95);
+  --btn-text: #F8F6F2;
+  --btn-on-accent: #1C1C1C;
+  --text-on-dark: rgba(248, 246, 242, 0.9);
+  --text-on-dark-muted: rgba(248, 246, 242, 0.55);
+  --text-on-dark-dim: rgba(248, 246, 242, 0.2);
+  --text-on-dark-label: rgba(248, 246, 242, 0.45);
+  --text-on-dark-link: rgba(248, 246, 242, 0.35);
+  --accent-glow: rgba(184, 151, 90, 0.12);
+  --accent-border: rgba(184, 151, 90, 0.3);
+  --accent-ghost: rgba(184, 151, 90, 0.06);
+  --overlay-gradient: rgba(28, 28, 28, 0.85);
+  --ghost-text: rgba(28, 28, 28, 0.04);
+  --dark-border: rgba(255, 255, 255, 0.08);
+  --input-bg: rgba(255, 255, 255, 0.06);
+  --input-border: rgba(255, 255, 255, 0.15);
+  --input-focus-bg: rgba(184, 151, 90, 0.06);
+  --knit-pattern: rgba(28, 28, 28, 0.12);
+  --knit-label: rgba(28, 28, 28, 0.25);
+
   --serif: var(--font-cormorant), Georgia, serif;
   --sans: var(--font-dm-sans), system-ui, sans-serif;
   --section-pad: 100px 5vw;
+}
+
+/* ─── DARK MODE TOKENS ─── */
+[data-theme="dark"] {
+  --charcoal: #F0EBE5;
+  --slate: #A89888;
+  --slate-light: #7A6E62;
+  --white: #0C0A08;
+  --pure-white: #1C1916;
+  --gold: #C4704B;
+  --gold-light: #D4835F;
+  --navy: #D4835F;
+  --border: rgba(240, 235, 229, 0.06);
+  --border-strong: rgba(240, 235, 229, 0.12);
+
+  --bg-deep: #060503;
+  --bg-elevated: #1C1916;
+  --bg-muted: #14110F;
+  --nav-bg: rgba(12, 10, 8, 0.88);
+  --btn-text: #0C0A08;
+  --btn-on-accent: #0C0A08;
+  --text-on-dark: rgba(240, 235, 229, 0.8);
+  --text-on-dark-muted: rgba(240, 235, 229, 0.55);
+  --text-on-dark-dim: rgba(240, 235, 229, 0.2);
+  --text-on-dark-label: rgba(240, 235, 229, 0.4);
+  --text-on-dark-link: rgba(240, 235, 229, 0.3);
+  --accent-glow: rgba(196, 112, 75, 0.1);
+  --accent-border: rgba(196, 112, 75, 0.3);
+  --accent-ghost: rgba(196, 112, 75, 0.04);
+  --overlay-gradient: rgba(6, 5, 3, 0.85);
+  --ghost-text: rgba(240, 235, 229, 0.03);
+  --dark-border: rgba(240, 235, 229, 0.06);
+  --input-bg: rgba(240, 235, 229, 0.04);
+  --input-border: rgba(240, 235, 229, 0.1);
+  --input-focus-bg: rgba(196, 112, 75, 0.05);
+  --knit-pattern: rgba(240, 235, 229, 0.04);
+  --knit-label: rgba(240, 235, 229, 0.2);
 }
 
 /* ─── BASE ─── */
@@ -35,6 +97,7 @@ body {
   min-height: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  transition: background-color 0.35s ease, color 0.35s ease;
 }
 
 a {
@@ -92,7 +155,7 @@ section {
 /* ─── BUTTONS ─── */
 .btn-primary {
   background: var(--charcoal);
-  color: var(--white);
+  color: var(--btn-text);
   padding: 14px 32px;
   font-size: 13px;
   font-weight: 500;
@@ -101,7 +164,7 @@ section {
   text-decoration: none;
   border: none;
   cursor: pointer;
-  transition: background 0.2s, transform 0.15s;
+  transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
   display: inline-block;
   font-family: var(--sans);
 }
@@ -121,7 +184,7 @@ section {
   text-transform: uppercase;
   text-decoration: none;
   cursor: pointer;
-  transition: border-color 0.2s, transform 0.15s;
+  transition: border-color 0.3s, color 0.3s, transform 0.2s;
   display: inline-block;
   background: transparent;
   font-family: var(--sans);

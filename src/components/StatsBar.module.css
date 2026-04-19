@@ -1,10 +1,14 @@
 .bar {
-  background: var(--charcoal);
+  background: var(--bg-deep);
   padding: 32px 5vw;
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
   gap: 24px;
+  transition: background 0.35s ease;
+  position: relative;
+  z-index: 2;
+  margin-top: -48px;
 }
 
 .item {
@@ -23,7 +27,7 @@
   font-size: 11px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: rgba(248, 246, 242, 0.55);
+  color: var(--text-on-dark-muted);
 }
 
 @media (max-width: 640px) {
@@ -32,6 +36,7 @@
     grid-template-columns: 1fr 1fr;
     gap: 32px 16px;
     padding: 32px 8vw;
+    margin-top: -32px;
   }
 
   .num {

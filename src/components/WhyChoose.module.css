@@ -1,5 +1,6 @@
 .section {
   background: var(--pure-white);
+  transition: background 0.35s ease;
 }
 
 .grid {
@@ -13,7 +14,7 @@
   background: var(--pure-white);
   border: 0.5px solid var(--border);
   padding: 40px 36px;
-  transition: transform 0.2s;
+  transition: transform 0.2s, background 0.35s ease;
 }
 
 .card:hover {
@@ -23,11 +24,12 @@
 .icon {
   width: 48px;
   height: 48px;
-  background: var(--charcoal);
+  background: var(--bg-deep);
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 24px;
+  transition: background 0.35s ease;
 }
 
 .icon svg {

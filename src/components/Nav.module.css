@@ -9,9 +9,10 @@
   justify-content: space-between;
   padding: 0 5vw;
   height: 72px;
-  background: rgba(248, 246, 242, 0.95);
+  background: var(--nav-bg);
   backdrop-filter: blur(12px);
   border-bottom: 0.5px solid var(--border);
+  transition: background 0.35s ease;
 }
 
 .logo {
@@ -50,7 +51,7 @@
 
 .cta {
   background: var(--charcoal) !important;
-  color: var(--white) !important;
+  color: var(--btn-text) !important;
   padding: 10px 22px !important;
   letter-spacing: 0.06em !important;
   transition: background 0.2s !important;
@@ -58,6 +59,12 @@
 
 .cta:hover {
   background: var(--navy) !important;
+}
+
+.toggleWrap {
+  list-style: none;
+  display: flex;
+  align-items: center;
 }
 
 /* ─── HAMBURGER ─── */
@@ -99,7 +106,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: var(--charcoal);
+  background: var(--bg-deep);
   z-index: 99;
   display: flex;
   align-items: center;
@@ -118,7 +125,7 @@
   font-family: var(--serif);
   font-size: 28px;
   font-weight: 500;
-  color: var(--white);
+  color: var(--text-on-dark);
   text-decoration: none;
   transition: color 0.2s;
 }
@@ -138,6 +145,13 @@
   padding: 14px 32px;
   display: inline-block;
   margin-top: 12px;
+}
+
+.mobileToggle {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin-top: 8px;
 }
 
 @media (max-width: 640px) {

@@ -5,13 +5,15 @@
   align-items: center;
   background: var(--pure-white);
   padding: var(--section-pad);
+  transition: background 0.35s ease;
 }
 
 .image {
   aspect-ratio: 3/4;
-  background: var(--charcoal);
+  background: var(--bg-deep);
   position: relative;
   overflow: hidden;
+  transition: background 0.35s ease;
 }
 
 .imgPlaceholder {
@@ -22,7 +24,7 @@
   align-items: center;
   justify-content: center;
   gap: 10px;
-  color: rgba(255, 255, 255, 0.2);
+  color: var(--text-on-dark-dim);
   font-size: 11px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -33,7 +35,7 @@
   bottom: 0;
   left: 0;
   right: 0;
-  background: linear-gradient(transparent, rgba(28, 28, 28, 0.85));
+  background: linear-gradient(transparent, var(--overlay-gradient));
   padding: 40px 32px 32px;
 }
 
@@ -41,7 +43,7 @@
   font-family: var(--serif);
   font-size: 15px;
   font-style: italic;
-  color: rgba(248, 246, 242, 0.75);
+  color: var(--text-on-dark-muted);
 }
 
 .body {
@@ -62,6 +64,7 @@
   padding: 28px 24px;
   border: 0.5px solid var(--border);
   background: var(--white);
+  transition: background 0.35s ease;
 }
 
 .mvLabel {

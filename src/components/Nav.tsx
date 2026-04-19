@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import styles from "./Nav.module.css";
+import ThemeToggle from "./ThemeToggle";
 
 const navLinks = [
   { label: "Capabilities", href: "/capabilities" },
@@ -29,6 +30,9 @@ export default function Nav() {
           <a href="/contact" className={styles.cta}>
             Request a Quote
           </a>
+        </li>
+        <li className={styles.toggleWrap}>
+          <ThemeToggle />
         </li>
       </ul>
 
@@ -61,6 +65,9 @@ export default function Nav() {
               >
                 Request a Quote
               </a>
+            </li>
+            <li className={styles.mobileToggle}>
+              <ThemeToggle />
             </li>
           </ul>
         </div>

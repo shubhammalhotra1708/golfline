@@ -1,9 +1,10 @@
 .footer {
-  background: #0F0F0F;
+  background: var(--bg-deep);
   padding: 48px 5vw 32px;
   display: flex;
   flex-direction: column;
   gap: 32px;
+  transition: background 0.35s ease;
 }
 
 .top {
@@ -11,7 +12,7 @@
   justify-content: space-between;
   align-items: center;
   padding-bottom: 32px;
-  border-bottom: 0.5px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 0.5px solid var(--dark-border);
 }
 
 .logo {
@@ -19,7 +20,7 @@
   font-size: 24px;
   font-weight: 700;
   letter-spacing: 0.08em;
-  color: var(--white);
+  color: var(--text-on-dark);
   text-decoration: none;
 }
 
@@ -36,7 +37,7 @@
   font-size: 11px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.35);
+  color: var(--text-on-dark-link);
   text-decoration: none;
   transition: color 0.2s;
 }
@@ -53,14 +54,14 @@
 
 .copy {
   font-size: 12px;
-  color: rgba(255, 255, 255, 0.2);
+  color: var(--text-on-dark-dim);
 }
 
 .tagline {
   font-family: var(--serif);
   font-size: 13px;
   font-style: italic;
-  color: rgba(255, 255, 255, 0.2);
+  color: var(--text-on-dark-dim);
 }
 
 @media (max-width: 640px) {

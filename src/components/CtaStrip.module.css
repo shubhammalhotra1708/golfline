@@ -6,24 +6,25 @@
   justify-content: space-between;
   gap: 40px;
   flex-wrap: wrap;
+  transition: background 0.35s ease;
 }
 
 .text h2 {
   font-family: var(--serif);
   font-size: 32px;
   font-weight: 600;
-  color: var(--white);
+  color: var(--text-on-dark);
   margin-bottom: 8px;
 }
 
 .text p {
   font-size: 14px;
-  color: rgba(248, 246, 242, 0.55);
+  color: var(--text-on-dark-muted);
 }
 
 .btn {
   background: var(--gold);
-  color: var(--charcoal);
+  color: var(--btn-on-accent);
   padding: 14px 32px;
   font-size: 13px;
   font-weight: 500;

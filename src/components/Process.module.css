@@ -42,7 +42,7 @@
   width: 48px;
   height: 48px;
   background: var(--charcoal);
-  color: var(--gold);
+  color: var(--btn-text);
   font-family: var(--serif);
   font-size: 18px;
   font-weight: 700;
@@ -51,6 +51,7 @@
   justify-content: center;
   position: relative;
   z-index: 1;
+  transition: background 0.35s ease;
 }
 
 .step:hover .num {
