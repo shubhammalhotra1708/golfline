@@ -1,0 +1,49 @@
+.section {
+  background: var(--pure-white);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2px;
+  margin-top: 60px;
+}
+
+.card {
+  background: var(--pure-white);
+  border: 0.5px solid var(--border);
+  padding: 40px 36px;
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+.icon {
+  width: 48px;
+  height: 48px;
+  background: var(--charcoal);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+.icon svg {
+  fill: var(--gold);
+}
+
+.card h3 {
+  font-family: var(--serif);
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: var(--charcoal);
+}
+
+.card p {
+  font-size: 14px;
+  color: var(--slate);
+  line-height: 1.75;
+}

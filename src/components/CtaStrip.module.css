@@ -1,0 +1,50 @@
+.strip {
+  background: var(--navy);
+  padding: 64px 5vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.text h2 {
+  font-family: var(--serif);
+  font-size: 32px;
+  font-weight: 600;
+  color: var(--white);
+  margin-bottom: 8px;
+}
+
+.text p {
+  font-size: 14px;
+  color: rgba(248, 246, 242, 0.55);
+}
+
+.btn {
+  background: var(--gold);
+  color: var(--charcoal);
+  padding: 14px 32px;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.15s;
+  display: inline-block;
+  font-family: var(--sans);
+}
+
+.btn:hover {
+  background: var(--gold-light);
+  transform: translateY(-1px);
+}
+
+@media (max-width: 640px) {
+  .strip {
+    text-align: center;
+    justify-content: center;
+  }
+}
