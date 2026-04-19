@@ -35,3 +35,17 @@
   line-height: 1.7;
   margin-bottom: 40px;
 }
+
+@media (max-width: 640px) {
+  .section {
+    padding: 100px 5vw 60px;
+  }
+
+  .code {
+    font-size: clamp(60px, 18vw, 120px);
+  }
+
+  .title {
+    font-size: 24px;
+  }
+}

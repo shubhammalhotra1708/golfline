@@ -1,5 +1,5 @@
 .promise {
-  background: var(--navy);
+  background: var(--charcoal);
   padding: var(--section-pad);
   position: relative;
   overflow: hidden;
@@ -10,7 +10,7 @@
   font-family: var(--serif);
   font-size: 320px;
   font-weight: 700;
-  color: rgba(255, 255, 255, 0.04);
+  color: rgba(255, 255, 255, 0.03);
   position: absolute;
   top: -60px;
   left: 40px;
@@ -59,4 +59,17 @@
   letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--gold);
+}
+
+@media (max-width: 640px) {
+  .promise::before {
+    font-size: 160px;
+    top: -20px;
+    left: 10px;
+  }
+
+  .text {
+    font-size: 18px;
+    margin-bottom: 28px;
+  }
 }

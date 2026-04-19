@@ -97,3 +97,29 @@
   height: 1px;
   background: var(--gold);
 }
+
+@media (max-width: 640px) {
+  .timeline::before {
+    left: 32px;
+  }
+
+  .step {
+    grid-template-columns: 64px 1fr;
+    gap: 20px;
+    padding: 28px 0;
+  }
+
+  .num {
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+  }
+
+  .content h3 {
+    font-size: 20px;
+  }
+
+  .content p {
+    font-size: 14px;
+  }
+}

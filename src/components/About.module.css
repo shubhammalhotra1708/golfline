@@ -89,7 +89,20 @@
 }
 
 @media (max-width: 640px) {
+  .section {
+    gap: 40px;
+  }
+
   .missionVision {
     grid-template-columns: 1fr;
+    margin-top: 32px;
+  }
+
+  .mvCard {
+    padding: 24px 20px;
+  }
+
+  .body {
+    font-size: 14px;
   }
 }

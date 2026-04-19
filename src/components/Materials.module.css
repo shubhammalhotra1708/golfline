@@ -1,5 +1,5 @@
 .section {
-  background: var(--charcoal);
+  background: var(--white);
   padding: var(--section-pad);
 }
 
@@ -23,11 +23,11 @@
 }
 
 .title {
-  color: var(--white) !important;
+  color: var(--charcoal) !important;
 }
 
 .sub {
-  color: rgba(248, 246, 242, 0.6) !important;
+  color: var(--slate) !important;
 }
 
 .grid {
@@ -38,20 +38,20 @@
 }
 
 .card {
-  background: rgba(255, 255, 255, 0.04);
-  border: 0.5px solid rgba(255, 255, 255, 0.1);
+  background: var(--pure-white);
+  border: 0.5px solid var(--border);
   padding: 36px 32px;
-  transition: background 0.2s;
+  transition: transform 0.2s;
 }
 
 .card:hover {
-  background: rgba(255, 255, 255, 0.08);
+  transform: translateY(-4px);
 }
 
 .img {
   width: 100%;
   aspect-ratio: 1;
-  background: rgba(255, 255, 255, 0.06);
+  background: #EDE9E1;
   margin-bottom: 20px;
   display: flex;
   align-items: center;
@@ -63,10 +63,10 @@
 .knitPattern {
   width: 100%;
   height: 100%;
-  opacity: 0.4;
+  opacity: 0.3;
   background-image:
-    repeating-linear-gradient(0deg, rgba(184, 151, 90, 0.3) 0px, rgba(184, 151, 90, 0.3) 1px, transparent 1px, transparent 8px),
-    repeating-linear-gradient(90deg, rgba(184, 151, 90, 0.3) 0px, rgba(184, 151, 90, 0.3) 1px, transparent 1px, transparent 8px);
+    repeating-linear-gradient(0deg, rgba(28, 28, 28, 0.12) 0px, rgba(28, 28, 28, 0.12) 1px, transparent 1px, transparent 8px),
+    repeating-linear-gradient(90deg, rgba(28, 28, 28, 0.12) 0px, rgba(28, 28, 28, 0.12) 1px, transparent 1px, transparent 8px);
 }
 
 .img span {
@@ -74,7 +74,7 @@
   font-size: 11px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.25);
+  color: rgba(28, 28, 28, 0.25);
 }
 
 .tier {
@@ -89,12 +89,33 @@
   font-family: var(--serif);
   font-size: 22px;
   font-weight: 600;
-  color: var(--white);
+  color: var(--charcoal);
   margin-bottom: 10px;
 }
 
 .card p {
   font-size: 13px;
-  color: rgba(248, 246, 242, 0.5);
+  color: var(--slate);
   line-height: 1.7;
+}
+
+@media (max-width: 640px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 2px;
+  }
+
+  .card {
+    padding: 24px 20px;
+  }
+
+  .card h3 {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 400px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
 }
